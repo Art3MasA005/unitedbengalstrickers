@@ -201,21 +201,21 @@
     { src: 'assets/matchday/FB_IMG_1788548457276.jpg', category: 'matchday', caption: 'Wicket Celebration - Electric Team Spirit in RHHS League' },
     { src: 'assets/matchday/FB_IMG_1788548467846.jpg', category: 'matchday', caption: 'Boundary Strike - Executing the Team Motto: Born to Strike' },
     { src: 'assets/matchday/FB_IMG_1788548507586.jpg', category: 'matchday', caption: 'Post-Match Respect & Handshake with Opponents' },
+    { src: 'assets/gallery/received_1743818269970207.jpeg', category: 'celebration', caption: 'Trophy Celebration & Victory Moments on Tournament Grounds' },
+    { src: 'assets/gallery/received_1405807381582187.jpeg', category: 'celebration', caption: 'United Bengal Strikers Official Matchday Squad Lineup' },
     { src: 'assets/gallery/FB_IMG_1788548367176.jpg', category: 'celebration', caption: 'Victory Roar - Advancing to RHHS Premier League Semi-Finals' },
-    { src: 'assets/gallery/1788468187773.jpg', category: 'celebration', caption: 'The Brotherhood - Strikers Bonding Off the Pitch' },
+    { src: 'assets/gallery/1788468187773.jpg', category: 'celebration', caption: 'Strikers Celebration - Squad Bonding Off the Pitch' },
     { src: 'assets/gallery/1788468197172.jpg', category: 'celebration', caption: 'Franchise Jersey Launch & Squad Presentation' },
     { src: 'assets/gallery/1788468203327.jpg', category: 'celebration', caption: 'Golden Moments - Celebrating RHHS Knockout Triumphs' },
     { src: 'assets/gallery/1788468208769.jpg', category: 'celebration', caption: 'Management & Players United - A Shared Vision' },
-    { src: 'assets/gallery/1788468214193.jpg', category: 'celebration', caption: 'Team Chemistry & Unbreakable Brotherhood since 2019' },
+    { src: 'assets/gallery/1788468214193.jpg', category: 'celebration', caption: 'Team Chemistry & Unstoppable Spirit since 2019' },
     { src: 'assets/gallery/1788468258284.jpg', category: 'celebration', caption: 'Pre-Match Briefing & Captain Speech' },
     { src: 'assets/gallery/1788468261599.jpg', category: 'celebration', caption: 'Match Highlights & Tactical Debriefing' },
     { src: 'assets/gallery/1788468266011.jpg', category: 'celebration', caption: 'Training Ground Conditioning & Agility Drills' },
     { src: 'assets/gallery/1788468268716.jpg', category: 'celebration', caption: 'United Bengal Strikers Official Banner Ceremony' },
     { src: 'assets/gallery/received_1004582345858140.jpeg', category: 'poster', caption: 'Official Franchise Presentation Poster 2026' },
     { src: 'assets/gallery/received_1376333597666287.jpeg', category: 'poster', caption: 'RHHS Premier League Semi-Finalist Honour' },
-    { src: 'assets/gallery/received_1405807381582187.jpeg', category: 'matchday', caption: 'Strikers Defense - High Quality Fielding Session' },
-    { src: 'assets/gallery/received_1474705153824904.jpeg', category: 'celebration', caption: 'Team Spirit on Display at Rajshahi Tournament Grounds' },
-    { src: 'assets/gallery/received_1743818269970207.jpeg', category: 'matchday', caption: 'Concentration at the Crease - Powerplay Inning' }
+    { src: 'assets/gallery/received_1474705153824904.jpeg', category: 'celebration', caption: 'Team Spirit on Display at Rajshahi Tournament Grounds' }
   ];
 
   // DOM Elements
