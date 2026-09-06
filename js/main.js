@@ -134,25 +134,25 @@
       id: 'mikail',
       name: 'Makail Ahamed',
       jersey: '14',
-      role: 'Fast Bowler',
-      category: 'bowler',
+      role: 'Batsman',
+      category: 'batter',
       poster: 'assets/players/mikail.jpg',
       batting: 'Right-Hand Bat',
       bowling: 'Right-Arm Medium Fast',
-      bio: 'Energetic strike bowler armed with testing bouncers, disciplined length, and aggressive lower-order boundary capability.',
-      stats: { matches: '20', wickets: '29', runs: '310', economy: '6.70' }
+      bio: 'Dynamic batsman armed with clean striking, disciplined shot selection, and aggressive boundary-hitting capability.',
+      stats: { matches: '20', runs: '450', strikeRate: '148.2', best: '56*' }
     },
     {
       id: 'zihad',
       name: 'Jihad Hasan',
       jersey: '17',
-      role: 'Express Fast Bowler',
-      category: 'bowler',
+      role: 'Batsman',
+      category: 'batter',
       poster: 'assets/players/zihad.jpg',
       batting: 'Right-Hand Bat',
       bowling: 'Right-Arm Fast',
-      bio: 'Blistering speedster bowling with fierce velocity, high workrate, and a knack for dismantling opposition top orders.',
-      stats: { matches: '22', wickets: '34', economy: '7.10', best: '4/22' }
+      bio: 'Impactful batsman playing with fierce intent, rapid strike rotation, and unmatched power against tournament bowling attacks.',
+      stats: { matches: '22', runs: '490', strikeRate: '152.6', best: '62*' }
     },
     {
       id: 'easin',
@@ -180,7 +180,7 @@
     },
     {
       id: 'efaz',
-      name: 'Alimul Islam (Efaz)',
+      name: 'Efaz Ahmed',
       jersey: '33',
       role: 'All-Rounder',
       category: 'allrounder',
