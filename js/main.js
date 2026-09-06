@@ -10,7 +10,7 @@
   const PLAYERS_DATA = [
     {
       id: 'saykat',
-      name: 'Mobassir Saykat',
+      name: 'Mobassir Saykat (C)',
       jersey: '07',
       role: 'Captain & All-Rounder',
       category: 'allrounder',
@@ -22,27 +22,137 @@
     },
     {
       id: 'siam',
-      name: 'Ahsanul Siam',
+      name: 'Ahsanul Haque Siam',
       jersey: '18',
-      role: 'Vice Captain & Top-Order Batter',
-      category: 'batter',
+      role: 'Wicketkeeper-Batsman (WK)',
+      category: 'wk',
+      isWK: true,
       poster: 'assets/players/siam.jpg',
       batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Off Spin',
-      bio: 'Pillar of the Strikers batting order with explosive stroke-play, dependable match temperament, and leadership in high-stakes run chases.',
-      stats: { matches: '38', runs: '1,340', wickets: '12', strikeRate: '152.0' }
+      bowling: 'Wicketkeeper',
+      bio: 'Strikers core wicketkeeper-batsman with elite glovework behind the stumps and explosive match-winning capability in the top order.',
+      stats: { matches: '38', runs: '1,340', dismissals: '36', strikeRate: '152.0' }
+    },
+    {
+      id: 'kawsar',
+      name: 'VK Kawsar (VC)',
+      jersey: '11',
+      role: 'Vice-Captain & Batting All-Rounder',
+      category: 'allrounder',
+      poster: 'assets/players/kawsar.jpg',
+      batting: 'Left-Hand Bat',
+      bowling: 'Slow Left-Arm Orthodox',
+      bio: 'Vice-Captain and batting all-rounder equipped with crafty spin variations and clinical boundary-hitting under pressure.',
+      stats: { matches: '29', runs: '620', wickets: '41', strikeRate: '139.2' }
     },
     {
       id: 'sabbir',
-      name: 'Sabbir Hossain',
+      name: 'Sabbir Rahman',
       jersey: '01',
-      role: 'Wicketkeeper & Explosive Batter',
+      role: 'Top-Order Batsman',
       category: 'batter',
       poster: 'assets/players/sabbir.jpg',
       batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Medium',
+      bio: 'Aggressive top-order batsman known for blistering powerplay stroke-play and anchoring big run chases for the franchise.',
+      stats: { matches: '35', runs: '890', fifties: '7', strikeRate: '158.4' }
+    },
+    {
+      id: 'barkat',
+      name: 'Yasir Arafat Barkat',
+      jersey: '23',
+      role: 'Fast Bowler',
+      category: 'bowler',
+      poster: 'assets/players/barkat.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Fast',
+      bio: 'Fierce pace spearhead generating sharp bounce, searing yorkers, and early breakthrough wickets in the opening spells.',
+      stats: { matches: '27', wickets: '44', economy: '6.55', best: '4/16' }
+    },
+    {
+      id: 'kawsar-ahmed',
+      name: 'Kawsar Hossain',
+      jersey: '09',
+      role: 'Middle-Order Batsman',
+      category: 'batter',
+      poster: 'assets/players/kawsar-ahmed.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Off Break',
+      bio: 'Dependable middle-order batsman with solid defensive technique and explosive boundary-hitting gears in the final overs.',
+      stats: { matches: '24', runs: '580', strikeRate: '142.0', best: '64*' }
+    },
+    {
+      id: 'sumon',
+      name: 'Sumon Ahmed',
+      jersey: '88',
+      role: 'Batsman',
+      category: 'batter',
+      poster: 'assets/players/sumon.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Medium',
+      bio: 'Disciplined and dynamic batsman specialized in accelerating scoring in middle overs and stabilizing pressure situations.',
+      stats: { matches: '25', runs: '610', strikeRate: '144.6', fifties: '4' }
+    },
+    {
+      id: 'alif',
+      name: 'Alif Uddin',
+      jersey: '21',
+      role: 'Batsman',
+      category: 'batter',
+      poster: 'assets/players/alif.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Off Spin',
+      bio: 'Technical batsman with crisp timing through the off-side and high tactical awareness across tournament campaigns.',
+      stats: { matches: '19', runs: '480', strikeRate: '146.0', fifties: '3' }
+    },
+    {
+      id: 'sorot',
+      name: 'Sorot Mondal',
+      jersey: '05',
+      role: 'Opening Batsman',
+      category: 'batter',
+      poster: 'assets/players/sorot.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Leg Spin',
+      bio: 'Fearless powerplay opener attacking with textbook lofted drives, fast running between wickets, and fiery start-overs.',
+      stats: { matches: '18', runs: '530', strikeRate: '154.2', fifties: '4' }
+    },
+    {
+      id: 'emon',
+      name: 'Emon Hasan (WK)',
+      jersey: '77',
+      role: 'Wicketkeeper-Batsman (WK)',
+      category: 'wk',
+      isWK: true,
+      poster: 'assets/players/emon.jpg',
+      batting: 'Left-Hand Bat',
       bowling: 'Wicketkeeper',
-      bio: 'Lightning-fast reflexes behind the stumps and a fearless middle-order batter capable of flipping momentum in a single over.',
-      stats: { matches: '35', runs: '890', dismissals: '48', strikeRate: '158.4' }
+      bio: 'Sharp athletic wicketkeeper and electric left-handed batsman capable of clearing fences and executing lightning stumpings.',
+      stats: { matches: '17', runs: '370', dismissals: '24', strikeRate: '147.8' }
+    },
+    {
+      id: 'mikail',
+      name: 'Makail Ahamed',
+      jersey: '14',
+      role: 'Fast Bowler',
+      category: 'bowler',
+      poster: 'assets/players/mikail.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Medium Fast',
+      bio: 'Energetic strike bowler armed with testing bouncers, disciplined length, and aggressive lower-order boundary capability.',
+      stats: { matches: '20', wickets: '29', runs: '310', economy: '6.70' }
+    },
+    {
+      id: 'zihad',
+      name: 'Jihad Hasan',
+      jersey: '17',
+      role: 'Express Fast Bowler',
+      category: 'bowler',
+      poster: 'assets/players/zihad.jpg',
+      batting: 'Right-Hand Bat',
+      bowling: 'Right-Arm Fast',
+      bio: 'Blistering speedster bowling with fierce velocity, high workrate, and a knack for dismantling opposition top orders.',
+      stats: { matches: '22', wickets: '34', economy: '7.10', best: '4/22' }
     },
     {
       id: 'easin',
@@ -57,136 +167,28 @@
       stats: { matches: '31', wickets: '58', economy: '6.45', best: '5/18' }
     },
     {
-      id: 'kawsar',
-      name: 'Kawsar Mahmud',
-      jersey: '11',
-      role: 'Spin Bowling All-Rounder',
-      category: 'allrounder',
-      poster: 'assets/players/kawsar.jpg',
-      batting: 'Left-Hand Bat',
-      bowling: 'Slow Left-Arm Orthodox',
-      bio: 'Crafty spinner with subtle variations and an indispensable pinch hitter adept at accelerating the run rate in middle overs.',
-      stats: { matches: '29', runs: '620', wickets: '41', strikeRate: '139.2' }
-    },
-    {
-      id: 'barkat',
-      name: 'Barkat Ullah',
-      jersey: '23',
-      role: 'Middle-Order Anchor Batter',
-      category: 'batter',
-      poster: 'assets/players/barkat.jpg',
-      batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Medium',
-      bio: 'Reliable anchor capable of rebuilding innings under pressure and launching late-innings attacks with precision shot selection.',
-      stats: { matches: '27', runs: '760', wickets: '8', strikeRate: '136.8' }
-    },
-    {
-      id: 'kawsar-ahmed',
-      name: 'Kawsar Ahmed',
-      jersey: '09',
-      role: 'Mystery Spin Bowler',
-      category: 'bowler',
-      poster: 'assets/players/kawsar-ahmed.jpg',
-      batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Leg Break / Googly',
-      bio: 'Intricate leg-spin specialist who bamboozles top-order batters with deceptively sharp googlies and pinpoint control.',
-      stats: { matches: '24', wickets: '39', economy: '6.80', best: '4/14' }
-    },
-    {
-      id: 'zihad',
-      name: 'Zihad Hasan',
-      jersey: '17',
-      role: 'Express Pace Bowler',
-      category: 'bowler',
-      poster: 'assets/players/zihad.jpg',
-      batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Fast',
-      bio: 'Raw athletic bowler with blistering velocity, relentless stamina, and a reputation for breaking crucial opening partnerships.',
-      stats: { matches: '22', wickets: '34', economy: '7.10', best: '4/22' }
-    },
-    {
       id: 'mijan',
       name: 'Mijanur Rahman',
       jersey: '45',
-      role: 'Power All-Rounder',
+      role: 'Bowling All-Rounder',
       category: 'allrounder',
       poster: 'assets/players/mijan.jpg',
       batting: 'Right-Hand Bat',
       bowling: 'Right-Arm Medium Fast',
-      bio: 'Muscular power-hitter capable of clearing long boundaries and providing breakthrough overs with intelligent seam variations.',
+      bio: 'Muscular power all-rounder capable of clearing long boundaries and breaking partnerships with deceptive seam variations.',
       stats: { matches: '26', runs: '510', wickets: '28', strikeRate: '161.0' }
     },
     {
-      id: 'sumon',
-      name: 'Sumon Ali',
-      jersey: '88',
-      role: 'Death-Overs Seam Bowler',
-      category: 'bowler',
-      poster: 'assets/players/sumon.jpg',
-      batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Fast Medium',
-      bio: 'Disciplined death-overs specialist armed with disguised slower balls, wide yorkers, and cold nerves under pressure.',
-      stats: { matches: '25', wickets: '37', economy: '6.90', best: '4/20' }
-    },
-    {
-      id: 'mikail',
-      name: 'Mikail Islam',
-      jersey: '14',
-      role: 'Dynamic Finisher & Batter',
-      category: 'batter',
-      poster: 'assets/players/mikail.jpg',
-      batting: 'Left-Hand Bat',
-      bowling: 'Right-Arm Off Spin',
-      bio: 'A high-impact finisher whose innovative 360-degree stroke play and quick singles make him a nightmare for opposing captains.',
-      stats: { matches: '20', runs: '490', strikeRate: '166.5', sixes: '34' }
-    },
-    {
-      id: 'alif',
-      name: 'Alif Hossain',
-      jersey: '21',
-      role: 'Off-Spin Specialist',
-      category: 'bowler',
-      poster: 'assets/players/alif.jpg',
-      batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Off Spin',
-      bio: 'Tenacious finger spinner who chokes runs during fielding restrictions and generates sharp bounce off sporting tracks.',
-      stats: { matches: '19', wickets: '26', economy: '6.30', best: '3/15' }
-    },
-    {
-      id: 'sorot',
-      name: 'Sorot Chandra',
-      jersey: '05',
-      role: 'Aggressive Opening Batter',
-      category: 'batter',
-      poster: 'assets/players/sorot.jpg',
-      batting: 'Right-Hand Bat',
-      bowling: 'Right-Arm Leg Spin',
-      bio: 'Flamboyant powerplay batter who attacks bowling from ball one with textbook cover drives and lofted straight hits.',
-      stats: { matches: '18', runs: '530', strikeRate: '154.2', fifties: '4' }
-    },
-    {
       id: 'efaz',
-      name: 'Efaz Ahmed',
+      name: 'Alimul Islam (Efaz)',
       jersey: '33',
-      role: 'Utility All-Rounder',
+      role: 'All-Rounder',
       category: 'allrounder',
       poster: 'assets/players/efaz.jpg',
       batting: 'Right-Hand Bat',
       bowling: 'Right-Arm Medium',
-      bio: 'High-workrate cricketer providing depth to the Strikers squad with reliable batting cameos and disciplined boundary-riding.',
+      bio: 'High-workrate all-rounder providing depth to the Strikers squad with reliable batting cameos and disciplined medium-pace spells.',
       stats: { matches: '16', runs: '280', wickets: '18', strikeRate: '142.0' }
-    },
-    {
-      id: 'emon',
-      name: 'Emon Sarkar',
-      jersey: '77',
-      role: 'Impact Batter & Agile Fielder',
-      category: 'batter',
-      poster: 'assets/players/emon.jpg',
-      batting: 'Left-Hand Bat',
-      bowling: 'Right-Arm Medium',
-      bio: 'Electric presence on the field with cannon arm throws, coupled with aggressive left-handed batting in crisis situations.',
-      stats: { matches: '17', runs: '370', catches: '19', strikeRate: '147.8' }
     }
   ];
 
@@ -311,7 +313,11 @@
 
     const filtered = filter === 'all'
       ? PLAYERS_DATA
-      : PLAYERS_DATA.filter(p => p.category === filter);
+      : filter === 'wk'
+        ? PLAYERS_DATA.filter(p => p.category === 'wk' || p.isWK)
+        : filter === 'batter'
+          ? PLAYERS_DATA.filter(p => p.category === 'batter' || p.category === 'wk')
+          : PLAYERS_DATA.filter(p => p.category === filter);
 
     filtered.forEach(player => {
       const card = document.createElement('div');
@@ -319,11 +325,19 @@
       card.setAttribute('data-id', player.id);
       card.setAttribute('data-category', player.category);
 
+      const tagText = player.category === 'wk' || player.isWK
+        ? 'WK'
+        : player.category === 'bowler'
+          ? 'BOWLER'
+          : player.category === 'batter'
+            ? 'BATSMAN'
+            : 'ALL-ROUNDER';
+
       card.innerHTML = `
         <div class="striker-image-wrap">
           <img class="striker-img" src="${player.poster}" alt="${player.name}" loading="lazy">
           <div class="striker-jersey-badge">#${player.jersey}</div>
-          <div class="striker-motto-tag">STRIKER</div>
+          <div class="striker-motto-tag">${tagText}</div>
         </div>
         <div class="striker-info">
           <h3 class="striker-name">${player.name}</h3>
