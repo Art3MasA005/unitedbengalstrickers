@@ -1543,7 +1543,7 @@ ul {
 .jersey-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1.15;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: #030407;
