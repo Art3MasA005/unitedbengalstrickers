@@ -589,6 +589,186 @@
     });
   }
 
+  // 9.5 Official Team Jersey Interactivity (Size Picker, Edition Toggle & Congratulations Notice)
+  const jerseyOrderForm = document.getElementById('jersey-order-form');
+  const jerseySizeBtns = document.querySelectorAll('.jersey-size-picker .size-btn');
+  const selectedJerseySizeInput = document.getElementById('selected-jersey-size');
+  const jerseyEditionOptions = document.querySelectorAll('.jersey-edition-toggle .edition-option');
+  const jerseySuccessMsg = document.getElementById('jersey-success-msg');
+  const jerseyReorderBtn = document.getElementById('jersey-reorder-btn');
+  const jerseyWhatsAppBtn = document.getElementById('jersey-whatsapp-btn');
+  const celebrationWhatsAppBtn = document.getElementById('celebration-whatsapp-btn');
+
+  // Summary elements in celebration card
+  const summaryCustomerName = document.getElementById('summary-customer-name');
+  const summaryEdition = document.getElementById('summary-edition');
+  const summarySize = document.getElementById('summary-size');
+  const summaryCustom = document.getElementById('summary-custom');
+  const summaryPhone = document.getElementById('summary-phone');
+
+  // 1. Size Selection Functionality
+  let currentSelectedSize = 'M';
+  let currentSelectedSizeLabel = 'M (40")';
+
+  jerseySizeBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      jerseySizeBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentSelectedSize = this.getAttribute('data-size') || 'M';
+      currentSelectedSizeLabel = this.textContent.trim();
+      if (selectedJerseySizeInput) {
+        selectedJerseySizeInput.value = currentSelectedSize;
+      }
+    });
+  });
+
+  // 2. Edition Toggle Functionality
+  jerseyEditionOptions.forEach(opt => {
+    const radio = opt.querySelector('input[type="radio"]');
+    opt.addEventListener('click', function () {
+      jerseyEditionOptions.forEach(o => o.classList.remove('active'));
+      this.classList.add('active');
+      if (radio) radio.checked = true;
+    });
+  });
+
+  // Helper function to build WhatsApp Pre-Order message
+  function getJerseyOrderDetails() {
+    const editionRadio = document.querySelector('input[name="jersey_edition"]:checked');
+    const edition = editionRadio ? editionRadio.value : 'Player Match Edition';
+    const customName = (document.getElementById('jersey-custom-name')?.value || '').trim();
+    const customNum = (document.getElementById('jersey-custom-num')?.value || '').trim();
+    const customerName = (document.getElementById('jersey-customer-name')?.value || '').trim();
+    const customerPhone = (document.getElementById('jersey-customer-phone')?.value || '').trim();
+    const deliveryCity = (document.getElementById('jersey-delivery-city')?.value || '').trim();
+
+    const customText = (customName || customNum)
+      ? `${customName ? customName.toUpperCase() : 'STRIKER'} #${customNum || '07'}`
+      : 'Standard Official Match Kit';
+
+    return {
+      edition,
+      size: currentSelectedSizeLabel,
+      sizeCode: currentSelectedSize,
+      customName,
+      customNum,
+      customText,
+      customerName: customerName || 'Valued Fan',
+      customerPhone: customerPhone || 'Not provided',
+      deliveryCity: deliveryCity || 'Not specified'
+    };
+  }
+
+  function generateWhatsAppUrl(details) {
+    const msg = `🏏 *United Bengal Strikers — Official Jersey Pre-Order*\n\n` +
+      `• *Edition:* ${details.edition}\n` +
+      `• *Size:* ${details.size}\n` +
+      `• *Customization:* ${details.customText}\n` +
+      `• *Customer Name:* ${details.customerName}\n` +
+      `• *Phone:* ${details.customerPhone}\n` +
+      `• *Delivery Area:* ${details.deliveryCity}\n\n` +
+      `Please confirm my pre-order formality for the 2026 season. Thank you!`;
+    return `https://api.whatsapp.com/send?phone=8801300726702&text=${encodeURIComponent(msg)}`;
+  }
+
+  // 3. Pre-Order Form Submission & Congratulation Notice
+  if (jerseyOrderForm) {
+    jerseyOrderForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Check validation
+      const nameInput = document.getElementById('jersey-customer-name');
+      const phoneInput = document.getElementById('jersey-customer-phone');
+
+      if (nameInput && !nameInput.value.trim()) {
+        nameInput.focus();
+        return;
+      }
+      if (phoneInput && !phoneInput.value.trim()) {
+        phoneInput.focus();
+        return;
+      }
+
+      const submitBtn = document.getElementById('jersey-submit-btn');
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Processing Reservation... ⚡</span>';
+      }
+
+      setTimeout(() => {
+        const orderData = getJerseyOrderDetails();
+
+        // Populate congratulation summary
+        if (summaryCustomerName) summaryCustomerName.textContent = orderData.customerName;
+        if (summaryEdition) summaryEdition.textContent = orderData.edition;
+        if (summarySize) summarySize.textContent = orderData.size;
+        if (summaryCustom) summaryCustom.textContent = orderData.customText;
+        if (summaryPhone) summaryPhone.textContent = orderData.customerPhone;
+
+        // Update WhatsApp links with prefilled order
+        const waUrl = generateWhatsAppUrl(orderData);
+        if (celebrationWhatsAppBtn) celebrationWhatsAppBtn.href = waUrl;
+
+        // Hide form, show celebration card
+        jerseyOrderForm.style.display = 'none';
+        if (jerseySuccessMsg) {
+          jerseySuccessMsg.style.display = 'block';
+          jerseySuccessMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      }, 500);
+    });
+  }
+
+  // 4. Reset / Order Another Jersey Button
+  if (jerseyReorderBtn) {
+    jerseyReorderBtn.addEventListener('click', function () {
+      if (jerseySuccessMsg) jerseySuccessMsg.style.display = 'none';
+      if (jerseyOrderForm) {
+        jerseyOrderForm.reset();
+        jerseyOrderForm.style.display = 'block';
+        // Reset default size to M
+        jerseySizeBtns.forEach(b => {
+          if (b.getAttribute('data-size') === 'M') {
+            b.classList.add('active');
+            currentSelectedSize = 'M';
+            currentSelectedSizeLabel = b.textContent.trim();
+          } else {
+            b.classList.remove('active');
+          }
+        });
+        if (selectedJerseySizeInput) selectedJerseySizeInput.value = 'M';
+
+        // Reset edition active class
+        jerseyEditionOptions.forEach((opt, idx) => {
+          if (idx === 0) {
+            opt.classList.add('active');
+            const r = opt.querySelector('input[type="radio"]');
+            if (r) r.checked = true;
+          } else {
+            opt.classList.remove('active');
+          }
+        });
+
+        jerseyOrderForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
+
+  // 5. Pre-order via WhatsApp Direct Button (Form button)
+  if (jerseyWhatsAppBtn) {
+    jerseyWhatsAppBtn.addEventListener('click', function () {
+      const orderData = getJerseyOrderDetails();
+      const waUrl = generateWhatsAppUrl(orderData);
+      window.open(waUrl, '_blank');
+    });
+  }
+
   // 10. Smooth Scroll Spy for Navigation Links
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');

@@ -717,14 +717,48 @@
             </div>
           </form>
 
-          <!-- Pre-order Success Feedback -->
-          <div id="jersey-success-msg" style="display: none; margin-top: 1.5rem; padding: 1.2rem; background: rgba(37, 211, 102, 0.15); border: 1px solid #25d366; border-radius: var(--radius-sm); text-align: center;">
-            <h4 style="color: #25d366; font-family: var(--font-sub); font-size: 1.2rem; text-transform: uppercase;">
-              Jersey Pre-Order Reserved!
-            </h4>
-            <p id="jersey-success-details" style="color: #fff; font-size: 0.95rem; margin-top: 0.4rem;">
-              Your order formality has been dispatched to United Bengal Strikers desk. Our kit coordinator will reach out via WhatsApp / phone to confirm delivery.
+          <!-- Pre-order Success / Congratulations Notice -->
+          <div id="jersey-success-msg" class="jersey-celebration-card" style="display: none;">
+            <div class="celebration-badge-glow">
+              <span class="celebration-icon">🎉</span>
+              <span class="celebration-badge-text">Pre-Order Received! Congratulations</span>
+            </div>
+            <h4 class="celebration-title">Jersey Reservation Confirmed!</h4>
+            <p class="celebration-desc">
+              Thank you, <strong id="summary-customer-name" style="color: var(--color-gold-bright);">Striker Fan</strong>! Your official 2026 United Bengal Strikers jersey reservation has been registered with the franchise kit desk.
             </p>
+
+            <div class="celebration-summary-grid">
+              <div class="summary-card">
+                <span class="summary-label">Edition</span>
+                <span class="summary-val" id="summary-edition">Player Match Edition</span>
+              </div>
+              <div class="summary-card">
+                <span class="summary-label">Selected Size</span>
+                <span class="summary-val highlight-gold" id="summary-size">M (40")</span>
+              </div>
+              <div class="summary-card">
+                <span class="summary-label">Custom Print</span>
+                <span class="summary-val" id="summary-custom">#07 • YEASIR</span>
+              </div>
+              <div class="summary-card">
+                <span class="summary-label">Contact / Phone</span>
+                <span class="summary-val" id="summary-phone">01XXXXXXXXX</span>
+              </div>
+            </div>
+
+            <p class="celebration-notice-note">
+              🛡️ Our kit coordinator will contact you via WhatsApp / Phone to confirm delivery schedule and dispatch details before tournament matchdays.
+            </p>
+
+            <div class="celebration-actions">
+              <a id="celebration-whatsapp-btn" href="#" target="_blank" class="btn btn-whatsapp" style="flex: 1 1 220px;">
+                <span>Confirm on WhatsApp 💬</span>
+              </a>
+              <button type="button" id="jersey-reorder-btn" class="btn btn-outline-gold" style="flex: 1 1 180px;">
+                <span>Order Another Jersey ↺</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
